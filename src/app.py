@@ -1,21 +1,10 @@
 # import dependencies
-from fastapi import FastAPI, Request, Response
-from fastapi.responses import HTMLResponse
-from auth0_server_python.auth_server import ServerClient
-from asyncio import sleep
-from dotenv import load_dotenv
-from google.oauth2.credentials import Credentials
-from googleapiclient.discovery import build
-from googleapiclient.errors import HttpError
-import uvicorn
-import threading
-import asyncio
 import os
-import webbrowser
-import requests
 
-from datetime import datetime, timedelta, time
-import pytz  # For timezone handling
+from auth0_server_python.auth_server import ServerClient
+from dotenv import load_dotenv
+from fastapi import FastAPI, Request
+from fastapi.responses import HTMLResponse
 
 load_dotenv(dotenv_path=".env.local")
 print()
